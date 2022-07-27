@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 export const primaryButton = css`
   background-color: ${({ theme }) => theme.pallete.brand.blue};
   color: ${({ theme }) => theme.pallete.brand.white};
-  stroke: 0;
+  stroke: none;
   border: none;
 `
 

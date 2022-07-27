@@ -18,7 +18,10 @@
     "paths": {
       "@theme": ["src/theme"],
       "@theme/*": ["src/theme/*"],
-      "@model/*": ["src/model/*"]
+      "@model/*": ["src/model/*"],
+      "@atoms": ["src/atoms"],
+      "@atoms/*": ["src/atoms/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
   "include": ["assets", "src", "next-env.d.ts", "**/*.ts", "**/*.tsx"],

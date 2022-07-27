@@ -2,9 +2,6 @@ import { Button } from './Button.atom'
 import { ButtonProp } from './Button.interface'
 import { Story, addDecorator } from '@storybook/react'
 import { ThemeProvider } from 'styled-components'
-
-// import { ThemesProvider } from 'storybook-addon-styled-component-theme'
-
 import { theme } from '@theme'
 
 addDecorator((story) => <ThemeProvider theme={theme}>{story()}</ThemeProvider>)

@@ -7,4 +7,5 @@ export interface ButtonInternalProp {
 
 export interface ButtonProp extends ButtonInternalProp {
   label: string
+  onClick: () => void
 }

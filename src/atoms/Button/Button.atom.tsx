@@ -8,9 +8,10 @@ export const Button: React.FC<ButtonProp> = ({
   label,
   size = 'medium',
   variant = 'primary',
+  onClick,
 }) => {
   return (
-    <S.Button size={size} variant={variant}>
+    <S.Button size={size} variant={variant} onClick={onClick}>
       {label}
     </S.Button>
   )

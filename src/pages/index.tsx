@@ -1,10 +1,17 @@
 import type { NextPage } from 'next'
-import { Button } from 'src/atoms'
+import { IconButton } from 'src/atoms'
+
+import { ArrowRight } from 'src/assets/icons/ArrowRight'
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Button label="Click" variant="primary" />
+      <IconButton
+        icon={<ArrowRight />}
+        label="Click"
+        variant="secondary"
+        onClick={() => console.log('asd')}
+      />
     </div>
   )
 }
