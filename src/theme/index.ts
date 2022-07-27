@@ -2,6 +2,7 @@ import { pallete } from './palette'
 import { fontFamily } from './fontFamily'
 import { spacing } from './spacing'
 import { shadow } from './shadow'
+import { typography } from './typography'
 
 import { ButtonTheme, IconTheme, TextTheme } from './components'
 
@@ -12,6 +13,7 @@ export const theme = {
   fontFamily,
   spacing,
   shadow,
+  typography,
   components: {
     button: ButtonTheme,
     icon: IconTheme,

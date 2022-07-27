@@ -1,9 +1,14 @@
 export const typography = {
-  display: '55pt',
-  xs: '20px',
-  s: '30px',
-  m: '60px',
-  l: '80px',
-  xl: '120px',
-  xxl: '200px',
+  headings: {
+    display: '55pt',
+    h1: '40pt',
+    h2: '24pt',
+    h3: '22pt',
+  },
+  paragraphs: {
+    large: '20pt',
+    medium: '16pt',
+    normal: '14pt',
+    small: '12pt',
+  },
 }

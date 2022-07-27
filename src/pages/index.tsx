@@ -10,7 +10,9 @@ const Home: NextPage = () => {
       <Input value="asd" onChange={onChangeHandle} />
 
       <Text.p1>Aeeeee</Text.p1>
-      <Text.p1>Aeeeee</Text.p1>
+      <Text.p2>Aeeeee</Text.p2>
+      <Text.p3>Aeeeee</Text.p3>
+      <Text.p4>Aeeeee</Text.p4>
     </div>
   )
 }

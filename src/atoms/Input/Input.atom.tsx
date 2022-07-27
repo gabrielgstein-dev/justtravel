@@ -6,17 +6,12 @@ import * as S from './Input.style'
 export const Input: React.FC<InputProps> = ({
   value,
   onChange,
-  errorMessage,
+  placeholder,
 }) => {
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     onChange(evt.target.value)
   }
   return (
-    <S.Input
-      placeholder="Empty Input"
-      value={value}
-      onChange={handleChange}
-      errorMessage={!!errorMessage}
-    />
+    <S.Input placeholder={placeholder} value={value} onChange={handleChange} />
   )
 }

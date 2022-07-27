@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components'
+export const Container = styled.div``
 
-import { InputInternalProps } from './Input.interface'
-
-export const Input = styled.input<InputInternalProps>`
+export const Input = styled.input`
   ${({ theme }) => css`
     background: ${theme.pallete.greyScale.grey0};
     border: 0.8px solid ${theme.pallete.greyScale.grey10};
@@ -23,3 +22,6 @@ export const Input = styled.input<InputInternalProps>`
     }
   `}
 `
+
+export const LabelContainer = styled.div``
+export const ErrorMessageContaienr = styled.div``
