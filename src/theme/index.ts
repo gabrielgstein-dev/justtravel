@@ -3,7 +3,7 @@ import { fontFamily } from './fontFamily'
 import { spacing } from './spacing'
 import { shadow } from './shadow'
 
-import { ButtonTheme, IconTheme } from './components'
+import { ButtonTheme, IconTheme, TextTheme } from './components'
 
 export * from './global'
 
@@ -15,5 +15,6 @@ export const theme = {
   components: {
     button: ButtonTheme,
     icon: IconTheme,
+    text: TextTheme,
   },
 }

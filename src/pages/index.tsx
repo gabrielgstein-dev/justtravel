@@ -1,17 +1,16 @@
 import type { NextPage } from 'next'
-import { IconButton } from 'src/atoms'
-
-import { ArrowRight } from 'src/assets/icons/ArrowRight'
+import { Input, Text } from 'src/atoms'
 
 const Home: NextPage = () => {
+  const onChangeHandle = (prop: string) => {
+    console.log(prop)
+  }
   return (
-    <div>
-      <IconButton
-        icon={<ArrowRight />}
-        label="Click"
-        variant="secondary"
-        onClick={() => console.log('asd')}
-      />
+    <div style={{ width: '400px', height: '200px' }}>
+      <Input value="asd" onChange={onChangeHandle} />
+
+      <Text.p1>Aeeeee</Text.p1>
+      <Text.p1>Aeeeee</Text.p1>
     </div>
   )
 }

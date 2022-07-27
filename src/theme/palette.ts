@@ -6,6 +6,7 @@ const brand = {
 }
 
 const greyScale = {
+  grey0: '#FAFAFC',
   grey10: '#E7E9ED',
   grey20: '#CED2DB',
   grey30: '#B6BCC9',
