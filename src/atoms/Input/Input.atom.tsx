@@ -12,6 +12,11 @@ export const Input: React.FC<InputProps> = ({
     onChange(evt.target.value)
   }
   return (
-    <S.Input placeholder={placeholder} value={value} onChange={handleChange} />
+    <S.Input
+      disabled
+      placeholder={placeholder}
+      value={value}
+      onChange={handleChange}
+    />
   )
 }

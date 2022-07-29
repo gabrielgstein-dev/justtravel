@@ -3,7 +3,7 @@ export const Container = styled.div``
 
 export const Input = styled.input`
   ${({ theme }) => css`
-    background: ${theme.pallete.greyScale.grey0};
+    background-color: ${theme.pallete.greyScale.grey0};
     border: 0.8px solid ${theme.pallete.greyScale.grey10};
     border-radius: 4px;
     padding: 24px 16px;

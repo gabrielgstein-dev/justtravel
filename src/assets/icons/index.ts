@@ -1,1 +1,7 @@
 export * from './ArrowRight'
+export * from './AlertCircle'
+export * from './SuccessIcon'
+export * from './CalendarIcon'
+export * from './SearchIcon'
+export * from './CheckIcon'
+export * from './MinusIcon'

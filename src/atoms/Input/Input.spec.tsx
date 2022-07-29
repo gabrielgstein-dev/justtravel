@@ -40,4 +40,22 @@ describe('src/atoms/Input', () => {
 
     expect(onChangeHandle).toBeCalled()
   })
+
+  it('Should verify if the Input component have style integrity', () => {
+    const inputValue = 'Paragraph Test'
+    const onChangeHandle = jest.fn()
+    render(
+      <ThemeProvider theme={theme}>
+        <Input value={inputValue} onChange={onChangeHandle} />
+      </ThemeProvider>
+    )
+
+    const input = screen.getByRole('textbox')
+
+    expect(input).toHaveStyle({
+      'background-color': theme.pallete.greyScale.grey0,
+      border: `0.8px solid ${theme.pallete.greyScale.grey10}`,
+      'border-radius': '4px',
+    })
+  })
 })

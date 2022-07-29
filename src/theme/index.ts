@@ -4,7 +4,7 @@ import { spacing } from './spacing'
 import { shadow } from './shadow'
 import { typography } from './typography'
 
-import { ButtonTheme, IconTheme, TextTheme } from './components'
+import { ButtonTheme, IconTheme, TextTheme, InputTheme } from './components'
 
 export * from './global'
 
@@ -18,5 +18,6 @@ export const theme = {
     button: ButtonTheme,
     icon: IconTheme,
     text: TextTheme,
+    input: InputTheme,
   },
 }
