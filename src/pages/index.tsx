@@ -1,29 +1,18 @@
 import type { NextPage } from 'next'
 import { useState } from 'react'
-import { RadioButton } from 'src/atoms'
+import { Switch } from 'src/atoms'
 
 const Home: NextPage = () => {
-  const [checked, setChecked] = useState('')
-  const onChangeHandle = (prop: string) => {
+  const [checked, setChecked] = useState(false)
+  const onChangeHandle = (prop: boolean) => {
     setChecked(prop)
   }
   return (
     <div style={{ width: '400px', height: '200px' }}>
-      <RadioButton
-        name={'test-label'}
-        checked={checked}
+      <Switch
         onChange={onChangeHandle}
-        radioChildren={[
-          {
-            label: 'Label 1',
-            value: 'label1',
-          },
-          {
-            label: 'Label 2',
-            value: 'label2',
-            disabled: true,
-          },
-        ]}
+        checked={checked}
+        label={`Primeira ${checked}`}
       />
     </div>
   )
