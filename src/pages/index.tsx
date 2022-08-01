@@ -1,18 +1,19 @@
 import type { NextPage } from 'next'
-import { useState } from 'react'
-import { Switch } from 'src/atoms'
+import { TravelCard } from 'src/molecules'
+
+import CityImage from '@assets/images/city-image.jpg'
 
 const Home: NextPage = () => {
-  const [checked, setChecked] = useState(false)
-  const onChangeHandle = (prop: boolean) => {
-    setChecked(prop)
-  }
   return (
-    <div style={{ width: '400px', height: '200px' }}>
-      <Switch
-        onChange={onChangeHandle}
-        checked={checked}
-        label={`Primeira ${checked}`}
+    <div style={{ width: '700px', height: '200px' }}>
+      <TravelCard
+        title="Lorem ipsum dolor amet consectetur"
+        location="GetYourGuide Tours & Tickets GmbH"
+        originalPrice={2351.28}
+        promoPrice={1391.28}
+        reviewsQty={423}
+        rank={'6.3'}
+        img={CityImage}
       />
     </div>
   )

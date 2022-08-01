@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 import { ButtonInternalProp } from './Button.interface'
 
 export const Button = styled.button<ButtonInternalProp>`
-  border-radius: 4px;
   font-size: 16px;
   padding: 10px 20px;
   cursor: pointer;

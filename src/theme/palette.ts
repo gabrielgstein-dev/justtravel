@@ -8,6 +8,7 @@ const brand = {
 const greyScale = {
   grey0: '#FAFAFC',
   grey10: '#E7E9ED',
+  grey15: '#D9D9D9',
   grey20: '#CED2DB',
   grey30: '#B6BCC9',
   grey40: '#9EA5B8',

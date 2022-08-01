@@ -9,6 +9,7 @@ import {
 } from './styles/variants'
 
 export const getButtonSizeStyle = (size?: SizeType) => {
+  console.log(size)
   switch (size) {
     case EnumSize.LARGE:
       return buttonLarge

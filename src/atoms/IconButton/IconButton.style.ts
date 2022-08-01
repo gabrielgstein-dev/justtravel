@@ -20,6 +20,7 @@ export const IconContainer = styled.span<IconInternalProps>`
   display: flex;
 
   padding-left: 10px;
+  padding-right: 10px;
 
   ${({ theme, variant }) => css`
     & > svg {
