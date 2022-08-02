@@ -12,9 +12,9 @@ export const Container = styled.div`
 
 export const HeaderPhoto = styled.div`
   display: flex;
+  justify-content: space-between;
   padding: 14px;
-  z-index: 200;
-  position: absolute;
+  z-index: 2;
 `
 
 export const PhotoContainer = styled.div`
@@ -23,20 +23,27 @@ export const PhotoContainer = styled.div`
     width: 213px;
     background-color: ${theme.pallete.greyScale.grey15};
     position: relative;
+    z-index: 1;
   `}
 `
 
-export const TagContainer = styled.div``
+export const TagContainer = styled.div`
+  z-index: 10;
+`
 
-export const FavoriteContainer = styled.div``
+export const FavoriteContainer = styled.div`
+  z-index: 10;
+`
 
 export const DescriptionContainer = styled.div`
   display: flex;
   padding: 33px 24px;
+  width: 100%;
 `
 
 export const TitleContainer = styled.div`
   ${({ theme }) => css`
+    width: 60%;
     border-right: 1px solid ${theme.pallete.greyScale.grey10};
   `}
 `
@@ -82,8 +89,8 @@ export const LocationContainer = styled.div`
 export const PriceContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 26px 24px;
+  width: 40%;
 `
 
 export const OriginalPrice = styled.div`
@@ -101,4 +108,8 @@ export const PromoPriceValue = styled.div`
 `
 export const CurrencySimbol = styled.div`
   margin-right: 4px;
+`
+
+export const ReadMoreContainer = styled.div`
+  margin-top: 24px;
 `

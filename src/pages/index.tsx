@@ -1,20 +1,24 @@
 import type { NextPage } from 'next'
-import { TravelCard } from 'src/molecules'
 
-import CityImage from '@assets/images/city-image.jpg'
+import { useAppDispatch, useAppSelector } from '@core/redux'
+import { kenya } from '@core/redux/slices'
 
 const Home: NextPage = () => {
+  const dispatch = useAppDispatch()
+  const { data, pending, error } = useAppSelector(kenya.selectKanye)
+
   return (
-    <div style={{ width: '700px', height: '200px' }}>
-      <TravelCard
-        title="Lorem ipsum dolor amet consectetur"
-        location="GetYourGuide Tours & Tickets GmbH"
-        originalPrice={2351.28}
-        promoPrice={1391.28}
-        reviewsQty={423}
-        rank={'6.3'}
-        img={CityImage}
-      />
+    <div>
+      <h2>Generate random Kanye West quote</h2>
+      {pending && <p>Loading...</p>}
+      {data && <p>{data.quote}</p>}
+      {error && <p>Oops, something went wrong</p>}
+      <button
+        onClick={() => dispatch(kenya.getKanyeQuote())}
+        disabled={pending}
+      >
+        Generate Kanye Quote
+      </button>
     </div>
   )
 }

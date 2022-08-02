@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-
-import { Tag, Title, Text } from '@atoms'
+import { ArrowRight } from '@assets/icons'
+import { Tag, Title, Text, IconButton } from '@atoms'
 
 import { EmptyHeartIcon, PinIcon } from '@assets/icons'
 import { TravelCardProps } from './TravelCard.interface'
@@ -21,6 +21,9 @@ export const TravelCard: React.FC<TravelCardProps> = ({
   title,
   img,
 }) => {
+  const onReadMore = () => {
+    console.log('read more')
+  }
   return (
     <S.Container>
       <S.PhotoContainer>
@@ -34,7 +37,12 @@ export const TravelCard: React.FC<TravelCardProps> = ({
           </S.FavoriteContainer>
         </S.HeaderPhoto>
 
-        <Image layout="fill" src={img || ''} alt={'City Image'} />
+        <Image
+          layout="fill"
+          src={img || ''}
+          alt={'City Image'}
+          loading="lazy"
+        />
       </S.PhotoContainer>
 
       <S.DescriptionContainer>
@@ -69,6 +77,14 @@ export const TravelCard: React.FC<TravelCardProps> = ({
               <Title.h2>{moneyWithoutCurrencySymbol(promoPrice)}</Title.h2>
             </S.PromoPriceValue>
           </S.PromoPriceContainer>
+
+          <S.ReadMoreContainer>
+            <IconButton
+              label="Saiba mais"
+              icon={<ArrowRight />}
+              onClick={onReadMore}
+            />
+          </S.ReadMoreContainer>
         </S.PriceContainer>
       </S.DescriptionContainer>
     </S.Container>

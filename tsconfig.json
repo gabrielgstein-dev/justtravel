@@ -21,7 +21,8 @@
       "@model/*": ["src/model/*"],
       "@atoms": ["src/atoms"],
       "@atoms/*": ["src/atoms/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@core/*": ["src/core/*"]
     }
   },
   "include": ["assets", "src", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
