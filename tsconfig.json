@@ -21,6 +21,9 @@
       "@model/*": ["src/model/*"],
       "@atoms": ["src/atoms"],
       "@atoms/*": ["src/atoms/*"],
+      "@molecules/*": ["src/molecules/*"],
+      "@molecules": ["src/molecules"],
+      "@organisms": ["src/organisms"],
       "@assets/*": ["src/assets/*"],
       "@core/*": ["src/core/*"]
     }

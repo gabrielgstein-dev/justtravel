@@ -6,6 +6,7 @@ import * as S from './Input.style'
 export const Input: React.FC<InputProps> = ({
   value,
   onChange,
+  disabled,
   placeholder,
 }) => {
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
@@ -13,7 +14,7 @@ export const Input: React.FC<InputProps> = ({
   }
   return (
     <S.Input
-      disabled
+      disabled={disabled}
       placeholder={placeholder}
       value={value}
       onChange={handleChange}
