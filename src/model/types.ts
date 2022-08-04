@@ -9,3 +9,5 @@ export type IconType = () => ({
   color,
   ...props
 }: SVGProps<SVGSVGElement>) => JSX.Element
+
+export type PropertyType = 'house' | 'apartment' | 'hotel'

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { PriceButtonProp } from './PriceButton.interface'
-import { money } from '@assets/normalizer'
+import { moneyWithCurrencySymbol } from '@assets/normalizer'
 
 import * as S from './PriceButton.style'
 
@@ -16,7 +16,9 @@ export const PriceButton: React.FC<PriceButtonProp> = ({
   return (
     <S.Button size={size} status={status} onClick={onClick}>
       {!!Icon && <Icon color={S.getStatusIconColor(status)} />}
-      {`${money(lowestPrice)} - ${money(highestPrice)}`}
+      {`${moneyWithCurrencySymbol(lowestPrice)} - ${moneyWithCurrencySymbol(
+        highestPrice
+      )}`}
     </S.Button>
   )
 }

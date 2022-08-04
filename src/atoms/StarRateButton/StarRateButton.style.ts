@@ -1,20 +1,9 @@
 import styled, { css } from 'styled-components'
-import { theme } from '@theme'
-import { PriceButtonInternalProp, StatusType } from './PriceButton.interface'
+import {
+  StarRateButtonInternalProp,
+  StatusType,
+} from './StarRateButton.interface'
 
-export const getStatusIconColor = (status?: StatusType) => {
-  switch (status) {
-    case 'able':
-      return theme.pallete.brand.blue
-    case 'selected':
-      return theme.pallete.brand.white
-    case 'disable':
-      return theme.pallete.greyScale.grey20
-
-    default:
-      return theme.pallete.greyScale.grey20
-  }
-}
 const getStatusStyle = (status?: StatusType) => {
   switch (status) {
     case 'able':
@@ -29,10 +18,11 @@ const getStatusStyle = (status?: StatusType) => {
   }
 }
 
-export const Button = styled.button<PriceButtonInternalProp>`
+export const Button = styled.button<StarRateButtonInternalProp>`
   ${({ theme, size, status }) => css`
     ${theme.components.button.getButtonSizeStyle(size)}
     ${getStatusStyle(status)}
+    color: ${theme.pallete.greyScale.grey30};
   `}
 
   font-size: 14px;
@@ -46,10 +36,13 @@ export const Button = styled.button<PriceButtonInternalProp>`
   height: 34px;
 
   & > svg {
-    margin: 10px;
+    margin: 2px;
+
+    &:last-child {
+      margin-right: 12px;
+    }
   }
 `
-
 const statusSelected = css`
   color: ${({ theme }) => theme.pallete.greyScale.grey10};
   background-color: ${({ theme }) => theme.pallete.brand.blue};
